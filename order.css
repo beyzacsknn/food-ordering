@@ -51,21 +51,51 @@
       .container .card
       {
         width:18rem;
+        background-color:hsla(0, 0%, 100%, 0.949);
+        border: none;
+        
+        margin-top: 200px;
+        margin-right: 10px;
+        flex-shrink: 0;
       }
 
-      .container
-      {
-       background-color:#f1d0d0f2;
+      .container .card img{
+        height: 210px;
+        width: 280px;
+
       }
+
+      .container .choose
+      {
+       background-color:hsla(0, 42%, 93%, 0.949);
+      width:800px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      padding-left: 50px;
+      padding-right: 50px;
+      
+      }
+
+    
 
       .container .option
       {
-       background-color:white; 
+       background-color:rgba(12, 11, 11, 0.026); 
+       border-radius: 10px;
        width: 100px;
       }
 
       .container .d-grid img
       {
-        background-color: white; 
+        background-color: rgb(244, 238, 238); 
         border-radius: 10px;
       }
+
+      .container .option
+      {
+        background-color: rgb(135, 135, 171);
+        color:white;
+      }
+
+      
+      
