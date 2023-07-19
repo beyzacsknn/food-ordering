@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StoreTube | My Cart</title>
+
+    <!-- Stylesheets -->
+<link rel="stylesheet" href="./src/css/style.css">
+<link rel="stylesheet" href="./src/css/login.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</head>
+<body onload="totalCalc()">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-sm bg-body-tertiary ">
+          <div class="container-fluid ">
+            <img src="media/logoavif.avif" alt="" width="90" height="90" class="d-inline-block align-text-top">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class=" flex justify-content-center collapse navbar-collapse " id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-around">
+                <div class="menu d-flex justify-content-evenly">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html" style="margin: 20px;">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" style="margin: 20px;">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="margin: 20px;">
+                    Dropdown
+                  </a>
+                </div>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+              </ul>
+              
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+              <nav class="navbar bg-body-tertiary">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">
+                    <img src="media/basket.svg" alt="" width="40" height="40" class="d-inline-block align-text-top">
+                    
+                  </a>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </nav>
+      
+          <!-- Navbar Ends -->
+
+          <!-- Cart content -->
+          
+         
+          <div class="row" style="margin-top: 30px;">
+              
+              <div class="col-8">
+                    <div class="cartHead">
+                        <center>Your cart contains...</center>
+                        <hr>
+                    </div>
+                    <div class="header d-flex " style="margin: 30px;">
+                    <div class="div col-4"><h6>ÜRÜN</h6></div>
+                    <div class="div  col-4"><h6>ÜRÜN SAYISI</h6></div>
+                    <div class="div col-4"><h6>ÜCRET</h6></div>
+
+
+
+
+                    </div>
+
+
+
+                   <!-- Sample product -->
+                  <div class="items row-1 col-12 d-flex justify-content-around " style="margin: 6px; padding:10px ; 
+                  box-shadow: 1px 2px 3px 4px rgba(20,20,20,0.132);">
+                    <div class="img col-sm-4 col-md-4 col-lg-4" >
+                      <img src="media/burger.jpg" style="width:100px ;height:100px ;"></div>  
+                      <div class="button col-sm-4 col-md-4 col-lg-4">
+                        <section class="patties">
+                          <label for="amount"><h5></h5></label><br>
+                          <input type="number" name="amount" id="amount">
+                        </section>
+                      </div>
+                      <div class="price col-sm-4 col-md-4 col-lg-4">
+                        
+                        <h5>15$</h5>
+                      </div>
+                      
+                </div><hr>
+                <div class="items row-1 col-12 d-flex justify-content-around" 
+                style="margin: 6px; padding:10px ; box-shadow: 1px 2px 3px 4px rgba(20, 20, 20, 0.132);">
+                  <div class="img col-4" >
+                    <img src="media/pizza.jpg" style="width:100px ;height:100px ;"></div>  
+                    <div class="button col-4">
+                      <section class="patties">
+                        <label for="amount"><h5></h5></label><br>
+                        <input type="number" name="amount" id="amount">
+                      </section>
+                    </div>
+                    <div class="price col-4">
+                      
+                      <h5>15$</h5>
+                    </div>
+            </div>
+                
+            </div>
+            
+                  
+              <div class="col-md-4 col-sm-4 col-lg-4" style="background: white;">
+                     <!-- Checkout Section -->
+                     <div class="cartHead">
+                        TOTAL
+                        <hr>
+                    </div>
+                    <div class="subTotal">
+                        <h4>Sub-total</h4>
+                        <h4>$<span class="subtotalamount amount">0</span></h4>
+                    </div>
+                    <hr>
+                    <div class="delivery">
+                        <h4>Delivery</h4>
+                        <h4>$<span class="deliveryamount amount">2</span></h4>
+                    </div>
+                    <hr>
+                    <div class="total">
+                        <h4>Total</h4>
+                        <h4>$<span class="totalamount amount">2</span></h4>
+                    </div><hr>
+                    <div class="checkoutBtn" >
+                        <button type="submit" data-toggle="modal" data-target="#myModal" 
+                        class="social" 
+                        style="border-radius: 10px; padding:8px; color:white; border-color: white;background-color: rgb(99, 161, 224);">Proceed to pay</button>
+                    </div><br>
+                    <div class="checkoutBtn">
+                      <button type="submit" class="social emptyCart" 
+                      style="border-radius: 10px; padding:8px; color:white; border-color: white;background-color: rgb(99, 161, 224); box-shadow: none;">
+                      Empty Cart</button>
+                  </div>
+                </div>
+              
+
+          </div>
+
+    <!-- Modal box -->
+          <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title">Success</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  
+                </div>
+                <div class="modal-body">
+                  <p>Payment was made. Your package will be delivered as soon as possible.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="shopBtn" style="outline: none; border: none;" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+
+    <script src="./src/js/cart.js"></script>
+</body>
+</html>
